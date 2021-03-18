@@ -9,6 +9,9 @@
     <script src="./js\key.js" async></script>
     <?php session_start(); ?>
 
+    <meta name="robots" content="joel, portfolio, jonna, wip, blog">
+    <meta name="description" content="A work in progress website which has been created as the final project in webdevelopment one">
+
     <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
@@ -28,21 +31,28 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="topnav">
-        <a href="/">Home</a>
-        <a href="#">temp</a>
-        <a href="#">temp</a>
-        <a href="#">temp</a>
-        <a href="#">temp</a>
+    <nav>
+        <a class="burger-menu-btn"><img class="burger-menu-btn" src="./img/menu-icon.svg"></a>
+        <div class="burger-menu">
+            <a href="/">Home</a>
+            <a href="#">temp</a>
+            <a href="#">temp</a>
+            <a href="#">temp</a>
+            <a href="#">temp</a>
+        </div>
         <?php 
             if ($_SESSION['userLogIn'] != null) {
-                print '<a id="signedIn" href="account.php">Your account</a>';
-                print '<a id="logOut" href="./misc/logOut.inc.php">Log Out</a>';
+                echo
+                '<a class="btn-accordion">' ."{$_SESSION['userLogIn']}". '<img src="./img/Arrow-down.svg"></a>
+                <ul class="accordion"> 
+                   <li> <a id="logOut" href="./misc/logOut.inc.php">Log Out</a> </li>
+                   <li> <a id="signedIn" href="account.php">Your account</a> </li>
+                </ul>';
                 $_SESSION['url'] = $_SERVER['PHP_SELF'];
             }
             else {
                 print '<a id="logIn" href="logIn.php">Log In</a>';
             }
         ?>
-    </div>
+    </nav>
     <div class="container">

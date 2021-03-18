@@ -10,8 +10,10 @@
                 <div>
                     <p>Password</p>
                     <input id="pass" type="password" name="password">
+                    <a class="sButton" id="logInPage"> Log In</a>
                 </div>
-                    <input class="sButton" type="submit" value="Log In"></input>
+                <div>
+                    <br>
                     <p> Trial account Username: tester </p>
                     <p> Trial account Password: tstpass </p>
                 </div>

@@ -3,7 +3,7 @@
 ?>
         <div class="text">
 
-			<p> <?php print ucfirst(strtolower($_SESSION['userLogIn'])); ?> </p>
+			<p> <?php print $_SESSION['userLogIn'] ?> </p>
 			<!--<p> <?php print $_SESSION['testpassword']; ?> </p>-->
         </div>
 <?php

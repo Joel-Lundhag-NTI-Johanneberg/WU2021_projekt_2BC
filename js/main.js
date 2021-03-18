@@ -1,3 +1,51 @@
+/*  Table of content
+    1. Listeners
+        1.1 Accordion 
+        1.2 Burger Menu
+        1.3 Submit Anchor
+        
+    2.Functions
+        2.1 typewriter
+        2.2 accordion
+        2.3 Burger Menu
+        2.4 Submit Anchor
+*/
+
+/*  =========
+    Listeners
+    =======*/
+
+// 1.1 Accordion
+// Event listener
+if (document.querySelector('.btn-accordion') != null ){
+const btnAccordion = document.querySelector('.btn-accordion').addEventListener("click", accordion);
+
+// set display to none
+document.querySelector('.accordion').style.display = "none";
+}
+
+// 1.2 Burger Menu
+// Event listener
+const btnBurger = document.querySelector('.burger-menu-btn').addEventListener("click", burgerMenu);
+
+// set display to none
+if (screen.width <= "1200"){
+    document.querySelector('.burger-menu').style.display = "none";
+}
+else {
+    document.querySelector('.burger-menu').style.display = "flex";
+}
+
+// 1.3 Submit Anchor
+if (document.querySelector('#logInPage') != null){
+    const logIn = document.querySelector('#logInPage').addEventListener("click", submit);
+}
+
+/*  =========
+    Functions
+    =======*/
+
+// 2.1 typewriter
 function typewriter (p){
     var txt = ["Temporär text", "Lorem ipsum dolor sit amet consectetur", "ladidadidada", "änno mer temporär text", "hallååå varför sitter du o kollar på de här så länge"]
     var i = 0;
@@ -31,4 +79,47 @@ function typewriter (p){
             }
         }
     }, speed);
+}
+
+// 2.2 Accordion
+function accordion() {
+    let show = document.querySelector(".accordion");
+    let btn = document.querySelector(".btn-accordion img");
+    if (show.style.display == "none") {
+        show.style.display = "block";
+
+        var i = -90;
+        var rotateP = setInterval( function() {
+            btn.style.transform = "rotate("+i+"deg)";
+            if(i==0){clearInterval(rotateP)}
+            i = i+10;
+        }, 1);
+    } 
+    else {
+        show.style.display = "none";
+
+        var i = 0;
+        var rotateN = setInterval( function() {
+        btn.style.transform = "rotate("+i+"deg)";
+        if(i==-90){clearInterval(rotateN)}
+        i = i-10;
+    }, 1);
+    }
+}
+
+// 2.3 Burger Menu
+function burgerMenu() {
+    let show = document.querySelector(".burger-menu");
+    if (show.style.display == "none") {
+        show.style.display = "flex";
+    } 
+
+    else {
+        show.style.display = "none";
+    }
+}
+
+// 2.4 Submit Anchor
+function submit() {
+    document.getElementById('logDiv').submit(); 
 }
