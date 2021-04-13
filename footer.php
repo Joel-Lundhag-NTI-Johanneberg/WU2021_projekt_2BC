@@ -1,4 +1,5 @@
-    </div>
+    </div> 
+    <!-- closing div for containers -->
 
     <!--<div class="footer">
     </div>-->

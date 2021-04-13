@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="./css\main.css">
-    <script src="./js\main.js" async></script>
-    <script src="./js\key.js" async></script>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <script src="./js/main.js" async></script>
+    <script src="./js/key.js" async></script>
     <?php session_start(); ?>
 
     <meta name="robots" content="joel, portfolio, jonna, wip, blog">
@@ -35,7 +35,7 @@
         <a class="burger-menu-btn"><img class="burger-menu-btn" src="./img/menu-icon.svg"></a>
         <div class="burger-menu">
             <a href="/">Home</a>
-            <a href="#">temp</a>
+            <a href="post.php">Posts</a>
             <a href="#">temp</a>
             <a href="#">temp</a>
             <a href="#">temp</a>
@@ -56,3 +56,4 @@
         ?>
     </nav>
     <div class="container">
+    <div class="deselect"></div>

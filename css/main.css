@@ -7,13 +7,15 @@
 
     2.Layout
         2.1 Navbar components
-		2.2 Phone Hamburger menu
+		    2.2 Phone Hamburger menu
         2.3 Accordion
         2.4 Container
         2.5 Text container
             2.5.1 Div in logIn.php
-        
-        2.6 Footer
+        2.6 Deselect
+        2.7 Posts
+        2.8 New post
+        2.9 Footer
 
     3. Components
         3.1 Small button
@@ -36,8 +38,7 @@ body {
 
 /* 1.2 The navbar container */
 nav {
-  background: var(--main-background-color);
-  opacity: var(--main-opacity);
+  background: var(--main-opacity);
   position: relative;
 }
 
@@ -50,7 +51,7 @@ nav {
 
   --main-border-color: #a86074;
 
-  --main-opacity: 0.3;
+  --main-opacity: rgba(255, 255, 255, 0.3);
 }
 
 /* 1.4 Global styling */
@@ -122,7 +123,7 @@ nav #head {
   .burger-menu {
     flex-flow: column;
     align-items: flex-start;
-    background-color: var(--main-background-color);
+    background-color: var(--main-opacity);
     max-width: 5rem;
     border: 2px solid var(--main-color);
     align-items: center;
@@ -147,7 +148,7 @@ nav #head {
 /* 2.3 accordion */
 .accordion {
   overflow: hidden;
-  background: var(--main-background-color);
+  background: var(--main-opacity);
   margin-top: 3.7%;
   list-style-type: none;
   padding: 0;
@@ -184,8 +185,7 @@ nav #head {
 .text {
   position: absolute;
   display: flex;
-  background-color: var(--main-background-color);
-  opacity: var(--main-opacity);
+  background-color: var(--main-opacity);
   padding: 5% 5% 5% 5%;
   left: 15vw;
   margin-top: 15vh;
@@ -201,7 +201,9 @@ nav #head {
 }
 
 #pass,
-#user {
+#user,
+#postHeader,
+#postText {
   background: none;
   border: 1px solid var(--main-color);
   font-size: 100%;
@@ -210,7 +212,64 @@ nav #head {
   box-shadow: 10px 5px 5px 2px var(--secondary-background-color);
 }
 
-/* 2.6 Footer */
+/* 2.6 Deselect */
+.deselect {
+  width: 100%;
+  height: 100%;
+  z-index: -10000;
+}
+
+/* 2.7 Posts */
+.posts {
+  position: absolute;
+  background-color: var(--main-opacity);
+  padding: 0 5% 0% 5%;
+  left: 15vw;
+  width: 60vw;
+  height: calc(100% - 15vh);
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 2.7.1 post cards */
+.post-card {
+  background: var(--main-background-color);
+  padding: 2%;
+  margin-bottom: 2%;
+  position: relative;
+  border-radius: 1rem;
+  width: 90%;
+}
+
+.post-card .header {
+  margin-top: 1%;
+  font-size: 150%;
+}
+
+.post-card .author {
+  margin-top: 1%;
+  color: gray;
+}
+
+.post-card p {
+  position: relative;
+  margin-top: 3%;
+}
+
+/* 2.8 New Post */
+.postWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* 2.9 Footer */
 .footer {
   background-color: #f1f1f1;
   padding: 1%;
@@ -236,5 +295,5 @@ nav #head {
 }
 
 .sButton:hover {
-  background-color: #f686a2;
+  background-color: var(--secondary-background-color);
 }
