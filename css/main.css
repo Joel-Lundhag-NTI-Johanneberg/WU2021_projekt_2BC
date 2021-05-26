@@ -27,36 +27,36 @@
 
 /* 1.1 Body */
 body {
-  font-size: 120%;
-  font-family: sans-serif;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  margin: 0;
-  color: var(--main-color);
+	font-size: 120%;
+	font-family: sans-serif;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	color: var(--main-color);
 }
 
 /* 1.2 The navbar container */
 nav {
-  background: var(--main-opacity);
-  position: relative;
+	background: var(--main-opacity);
+	position: relative;
 }
 
 /* 1.3 Global Variables */
 :root {
-  --main-color: black;
+	--main-color: black;
 
-  --main-background-color: white;
-  --secondary-background-color: #f686a2;
+	--main-background-color: white;
+	--secondary-background-color: #f686a2;
 
-  --main-border-color: #a86074;
+	--main-border-color: #a86074;
 
-  --main-opacity: rgba(255, 255, 255, 0.3);
+	--main-opacity: rgba(255, 255, 255, 0.3);
 }
 
 /* 1.4 Global styling */
 * {
-  margin: 0;
+	margin: 0;
 }
 
 /*  =========
@@ -66,218 +66,218 @@ nav {
 /* 2.1 Navbar components */
 nav a,
 .accordion {
-  display: inline-block;
-  color: var(--main-color);
-  text-align: center;
-  padding: 1% 2%;
-  cursor: pointer;
-  text-decoration: none;
-  outline: 2px solid transparent;
-  transition: outline 250ms ease-in-out, background-color 250ms ease-in-out;
+	display: inline-block;
+	color: var(--main-color);
+	text-align: center;
+	padding: 1% 2%;
+	cursor: pointer;
+	text-decoration: none;
+	outline: 2px solid transparent;
+	transition: outline 250ms ease-in-out, background-color 250ms ease-in-out;
 }
 
 nav a:hover,
 a:focus,
 .accordion {
-  background-color: #f686a2;
-  color: var(--main-color);
-  outline: 2px solid var(--main-color);
+	background-color: #f686a2;
+	color: var(--main-color);
+	outline: 2px solid var(--main-color);
 }
 
 nav #logIn,
 .btn-accordion,
 .accordion {
-  position: absolute;
-  right: 0;
-  top: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 nav #head {
-  display: inline-block;
-  color: var(--main-color);
-  text-align: center;
-  padding: 0% 1%;
-  text-decoration: underline;
-  font-weight: bolder;
+	display: inline-block;
+	color: var(--main-color);
+	text-align: center;
+	padding: 0% 1%;
+	text-decoration: underline;
+	font-weight: bolder;
 }
 
 .burger-menu-btn {
-  display: none;
+	display: none;
 }
 
 .burger-menu {
-  display: flex;
+	display: flex;
 }
 
 /*2.2 Phone Hamburger menu */
 @media screen and (max-width: 1200px) {
-  nav {
-    height: 3rem;
-  }
+	nav {
+		height: 3rem;
+	}
 
-  .burger-menu-btn {
-    display: block;
-    width: 2.9rem;
-  }
+	.burger-menu-btn {
+		display: block;
+		width: 2.9rem;
+	}
 
-  .burger-menu {
-    flex-flow: column;
-    align-items: flex-start;
-    background-color: var(--main-opacity);
-    max-width: 5rem;
-    border: 2px solid var(--main-color);
-    align-items: center;
-    overflow: hidden;
-  }
+	.burger-menu {
+		flex-flow: column;
+		align-items: flex-start;
+		background-color: var(--main-opacity);
+		max-width: 5rem;
+		border: 2px solid var(--main-color);
+		align-items: center;
+		overflow: hidden;
+	}
 
-  .burger-menu a {
-    padding: 4% 100%;
-  }
+	.burger-menu a {
+		padding: 4% 100%;
+	}
 
-  .btn-accordion {
-    height: 2.4rem;
-    line-height: 2.4rem;
-  }
+	.btn-accordion {
+		height: 2.4rem;
+		line-height: 2.4rem;
+	}
 
-  #logIn {
-    height: 2.4rem;
-    line-height: 2.4rem;
-  }
+	#logIn {
+		height: 2.4rem;
+		line-height: 2.4rem;
+	}
 }
 
 /* 2.3 accordion */
 .accordion {
-  overflow: hidden;
-  background: var(--main-opacity);
-  margin-top: 3.7%;
-  list-style-type: none;
-  padding: 0;
+	overflow: hidden;
+	background: var(--main-opacity);
+	margin-top: 3.7%;
+	list-style-type: none;
+	padding: 0;
 }
 @media screen and (max-width: 1200px) {
-  .accordion {
-    margin-top: 3rem;
-  }
+	.accordion {
+		margin-top: 3rem;
+	}
 }
 .accordion a {
-  padding: 2% 20%;
+	padding: 2% 20%;
 }
 
 .btn-accordion img {
-  width: 1em;
-  transform: rotate(-90deg);
+	width: 1em;
+	transform: rotate(-90deg);
 }
 
 /* 2.4 Conainer*/
 .container {
-  position: absolute;
-  background: url("../img/twinkle.gif") bottom left no-repeat;
-  background-size: cover;
-  height: 100vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
-  padding: 0%;
-  z-index: -100;
-  display: flex;
+	position: absolute;
+	background: url("../img/twinkle.gif") bottom left no-repeat;
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	padding: 0%;
+	z-index: -100;
+	display: flex;
 }
 
 /* 2.5 Text container*/
 .text {
-  position: absolute;
-  display: flex;
-  background-color: var(--main-opacity);
-  padding: 5% 5% 5% 5%;
-  left: 15vw;
-  margin-top: 15vh;
-  width: 60vw;
-  height: 50vh;
-  justify-content: center;
-  align-items: center;
+	position: absolute;
+	display: flex;
+	background-color: var(--main-opacity);
+	padding: 5% 5% 5% 5%;
+	left: 15vw;
+	margin-top: 15vh;
+	width: 60vw;
+	height: 50vh;
+	justify-content: center;
+	align-items: center;
 }
 
 /* 2.5.1 Div in logIn.php*/
 #logDiv {
-  text-align: center;
+	text-align: center;
 }
 
 #pass,
 #user,
 #postHeader,
 #postText {
-  background: none;
-  border: 1px solid var(--main-color);
-  font-size: 100%;
-  padding: 1% 2%;
-  margin-bottom: 5%;
-  box-shadow: 10px 5px 5px 2px var(--secondary-background-color);
+	background: none;
+	border: 1px solid var(--main-color);
+	font-size: 100%;
+	padding: 1% 2%;
+	margin-bottom: 5%;
+	box-shadow: 10px 5px 5px 2px var(--secondary-background-color);
 }
 
 /* 2.6 Deselect */
 .deselect {
-  width: 100%;
-  height: 100%;
-  z-index: -10000;
+	width: 100%;
+	height: 100%;
+	z-index: -10000;
 }
 
 /* 2.7 Posts */
 .posts {
-  position: absolute;
-  background-color: var(--main-opacity);
-  padding: 0 5% 0% 5%;
-  left: 15vw;
-  width: 60vw;
-  height: calc(100% - 15vh);
-  margin-top: 15vh;
-  margin-bottom: 15vh;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	position: absolute;
+	background-color: var(--main-opacity);
+	padding: 0 5% 0% 5%;
+	left: 15vw;
+	width: 60vw;
+	height: calc(100% - 15vh);
+	margin-top: 15vh;
+	margin-bottom: 15vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* 2.7.1 post cards */
 .post-card {
-  background: var(--main-background-color);
-  padding: 2%;
-  margin-bottom: 2%;
-  position: relative;
-  border-radius: 1rem;
-  width: 90%;
+	background: var(--main-background-color);
+	padding: 2%;
+	margin-bottom: 2%;
+	position: relative;
+	border-radius: 1rem;
+	width: 90%;
 }
 
 .post-card .header {
-  margin-top: 1%;
-  font-size: 150%;
+	margin-top: 1%;
+	font-size: 150%;
 }
 
 .post-card .author {
-  margin-top: 1%;
-  color: gray;
+	margin-top: 1%;
+	color: gray;
 }
 
 .post-card p {
-  position: relative;
-  margin-top: 3%;
+	position: relative;
+	margin-top: 3%;
 }
 
 /* 2.8 New Post */
 .postWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
 /* 2.9 Footer */
 .footer {
-  background-color: #f1f1f1;
-  padding: 1%;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+	background-color: #f1f1f1;
+	padding: 1%;
+	text-align: center;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 }
 
 /*  ============
@@ -286,14 +286,14 @@ nav #head {
 
 /* 3.1 small button*/
 .sButton {
-  padding: 2.5% 20%;
-  text-decoration: none;
-  cursor: pointer;
-  border: 2px solid black;
-  box-shadow: 10px 5px 5px 2px var(--secondary-background-color);
-  transition: background-color 250ms ease-in-out;
+	padding: 2.5% 20%;
+	text-decoration: none;
+	cursor: pointer;
+	border: 2px solid black;
+	box-shadow: 10px 5px 5px 2px var(--secondary-background-color);
+	transition: background-color 250ms ease-in-out;
 }
 
 .sButton:hover {
-  background-color: var(--secondary-background-color);
+	background-color: var(--secondary-background-color);
 }

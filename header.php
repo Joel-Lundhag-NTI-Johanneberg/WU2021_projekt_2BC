@@ -45,8 +45,8 @@
                 echo
                 '<a class="btn-accordion">' ."{$_SESSION['userLogIn']}". '<img src="./img/Arrow-down.svg"></a>
                 <ul class="accordion"> 
-                   <li> <a id="logOut" href="./misc/logOut.inc.php">Log Out</a> </li>
-                   <li> <a id="signedIn" href="account.php">Your account</a> </li>
+                    <li> <a id="signedIn" href="account.php">Your account</a> </li>
+                    <li> <a id="logOut" href="./misc/logOut.inc.php">Log Out</a> </li>
                 </ul>';
                 $_SESSION['url'] = $_SERVER['PHP_SELF'];
             }
